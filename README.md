@@ -24,8 +24,8 @@ Chinese models are released. We would like to thank [CLUE team ](https://github.
 ```
 python  convert_pytorch_model.py  \
     --tf_checkpoint ./<ALBERT_PRETRAIN_MODEL_PATH>/model.ckpt-best  \
-    --config ./<ALBERT_PRETRAIN_MODEL_PATH>/albert_config.json  \
-    --pytorch_dump_output models/pytorch_pretrain_model.bin
+    --albert_config_file ./<ALBERT_PRETRAIN_MODEL_PATH>/albert_config.json  \
+    --pytorch_dump_path models/pytorch_pretrain_model.bin
 ```
 
 ##### 环境配置

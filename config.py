@@ -20,8 +20,8 @@ class Config(object):
             learning_rate: Optional[float] = 3e-5,
             epochs: Optional[int] = 20,
             max_length: Optional[int] = 100,
-            train_data: Optional[Text] = "data/currency_datas/train.csv",
-            eval_data: Optional[Text] = "data/currency_datas/dev.csv",
+            train_data: Optional[Text] = "data/text-classifizer/train.csv",
+            eval_data: Optional[Text] = "data/text-classifizer/dev.csv",
             albert_vocab_file: Optional[Text] = "albert_base_zh/vocab_chinese.txt",
             albert_hidden_size: Optional[int] = 768,
             albert_pytorch_model_path: Optional[Text] = "models"

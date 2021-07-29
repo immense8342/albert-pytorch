@@ -1,6 +1,5 @@
 import torch
 from transformers import BertTokenizer, AlbertModel
-
 from config import Config
 from model import TextClassificationModel
 import torch.nn.functional as F
@@ -16,12 +15,12 @@ config = Config()
 tokenizer = AlBertTokenizer(config.albert_vocab_file)
 model = TextClassificationModel(config)
 
-model.load_state_dict(torch.load('models/text_classifizer-checkpoint_19_epoch.pkl')["model_state_dict"])
+model.load_state_dict(torch.load('models/text_classifizer-checkpoint_8_epoch.pkl')["model_state_dict"])
 
 model.to(config.device)
 model.eval()
 with torch.no_grad():
-    dataframe = pd.read_csv(config.eval_data)
+    dataframe = pd.read_csv("data/text-classifizer/test.csv")
     text_list = dataframe["text"]
     label = dataframe["label"]
     for idx, text in enumerate(text_list):
